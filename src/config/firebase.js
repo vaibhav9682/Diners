@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCc70Swb54e5ZWcUmJn8J2VoBPlo33QAWs",
-  authDomain: "restaurent-bdb7f.firebaseapp.com",
-  projectId: "restaurent-bdb7f",
-  storageBucket: "restaurent-bdb7f.appspot.com",
-  messagingSenderId: "327994454201",
-  appId: "1:327994454201:web:7cfc24be13bce712372b68"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase

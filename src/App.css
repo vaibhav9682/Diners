@@ -448,15 +448,15 @@ li {
 .cart-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 95%;
+  /* justify-content: space-evenly; */
+  height: 97%;
   width: 0;
   position: fixed;
   top: 10px;
   right: 0;
   transition: width 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
-  background-color: antiquewhite;
-  z-index: 255;
+  background-color: rgb(59, 59, 59);
+  z-index: 100;
   border-radius: 15px 0px 0px 15px;
 }
 
@@ -464,13 +464,16 @@ li {
   width: 30%;
 }
 .cart-header {
-  border: 1px solid green;
-  height: 5%;
+  /* border: 1px solid green; */
+  color: white;
+  text-align: center;
+  box-sizing: content-box;
+  height: 3%;
 }
+
 .cart-data {
-  border: 1px solid yellow;
-  height: 85%;
-  padding: 5px;
+  height: 95%;
+  padding: 15px;
   overflow: scroll;
 }
 .cart-item {
@@ -478,26 +481,63 @@ li {
   width: 100%;
   padding: 5px;
   box-sizing: content-box;
+  z-index: 1;
+}
+.cart-data .card-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
 }
 .cart-item img {
   height: 100px;
-  /* object-fit: fill; */
+  /* width: 70px; */
+  object-fit: contain;
+  z-index: 20;
 }
 
+.cart-header {
+  padding: 20px;
+}
+.total {
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  /* width: 100%; */
+  overflow: hidden;
+}
+.checkout-btn button {
+  background-color: red;
+}
+.checkout-btn h6 {
+  margin-bottom: 0px;
+}
 .details {
+  height: auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  box-sizing: content-box;
 }
 .details button {
-  width: 20px;
-  background: none;
-  border: none;
-  height: 20px;
+  background: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.details button:hover {
+  background-color: transparent;
 }
 .details img {
-  height: auto;
+  height: 15px;
+  width: 15px;
   object-fit: fill;
+  /* z-index: 10; */
 }
 
 .background-blur {
@@ -509,6 +549,7 @@ li {
   align-items: center;
   height: 100vh; /* Adjust the height based on your layout */
 }
+
 .loader {
   width: 50px;
   height: 50px;
@@ -564,4 +605,15 @@ li {
   /* position: absolute; */
   bottom: 5px;
   left: 5px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#sort-list {
+  margin-top: 25px;
+  width: max-content;
 }

@@ -4,7 +4,8 @@ import Home from './Components/home/Home';
 import Cart from './Components/cart/Cart';
 import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import Menu from './Components/menu/Menu';
-
+import CheckoutPage from './Components/checkout/Checkout';
+import OrderConfirmationPage from './Components/Orderplaced/Orderplaced';
 // const [toggle, setToggle] = useState();
 
 
@@ -25,6 +26,14 @@ function App() {
     {
       path: '/menu',
       element: <Menu />
+    },
+    {
+      path: '/checkout',
+      element: <CheckoutPage />
+    },
+    {
+      path: '/placed',
+      element: <OrderConfirmationPage />
     }
   ])
 
