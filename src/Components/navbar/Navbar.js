@@ -56,7 +56,7 @@ const Navbar = ({ scrollToRef }) => {
   const toggleCart = () => {
 
     setCart(prevCart => !prevCart);
-
+    console.log("clicked")
 
   }
 
@@ -82,6 +82,7 @@ const Navbar = ({ scrollToRef }) => {
     {
       text: "Card",
       icon: <ShoppingCartRoundedIcon />,
+      
     },
   ];
 
@@ -91,7 +92,7 @@ const Navbar = ({ scrollToRef }) => {
         <img src={Logo} alt="logo" />
       </div>
       <div className="navbar-links-container">
-        {(scrollToRef !== undefined)? 
+        {(scrollToRef !== undefined) ?
           <ul>
             <li onClick={() => scrollToRef('aboutRef')}>About</li>
             <li onClick={() => scrollToRef('workRef')}>Work</li>
@@ -111,7 +112,12 @@ const Navbar = ({ scrollToRef }) => {
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+        <Link to="" onClick={toggleCart}>
+          <BsCart2 className="navbar-cart-icon" />
+        </Link>
       </div>
+
+
       <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
         <Box
           sx={{ width: 250 }}
@@ -122,10 +128,10 @@ const Navbar = ({ scrollToRef }) => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <button >
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
-                </ListItemButton>
+                </button>
               </ListItem>
             ))}
           </List>
