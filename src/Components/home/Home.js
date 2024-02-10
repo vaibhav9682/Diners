@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import BannerBackground from "../../Assets/home-banner-background.png";
 import BannerImage from "../../Assets/home-banner-image.png";

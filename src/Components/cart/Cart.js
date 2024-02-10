@@ -17,7 +17,7 @@ const Cart = ({ display }) => {
 
       // const querySnapshot = await getDocs(collection(db, "cart"));
 
-
+      //eslint-disable-next-line
       const unsub = onSnapshot(collection(db, "cart"), (snapShot) => {
         const items = []
 
@@ -37,7 +37,7 @@ const Cart = ({ display }) => {
     }
     getList()
 
-
+//eslint-disable-next-line
   }, [])
 
 

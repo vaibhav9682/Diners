@@ -35,10 +35,11 @@ const Menu = () => {
       }
     };
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   const addToCart = async (data) => {
-
+// eslint-disable-next-line
     const docRef = await addDoc(collection(db, "cart"), data);
 
   };
